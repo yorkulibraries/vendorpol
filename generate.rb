@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require "csv"
-require "json"
+require "cgi"
 
 data_file = "vendorpol.csv"
 
@@ -20,11 +20,11 @@ puts <<HEAD
   </p>
 HEAD
 
-vendor_data.sort_by { |v|  v[0] }.each do |vendor|
-  puts "<h3> " + vendor[0] + "</h3>"
+vendor_data.sort_by { |v| v[0] }.each do |vendor|
+  puts "<h3> " + CGI.escapeHTML(vendor[0]) + "</h3>"
   puts "  <ul>"
   vendor[1].sort_by { |p| p[0] }.each do |product|
-    print "    <li> " + product[0] + ": "
+    print "    <li> " + CGI.escapeHTML(product[0]) + ": "
     unless product[1][:privacy_url].nil?
       print %(<a href="#{product[1][:privacy_url]}">privacy</a>)
       print ", " unless product[1][:tc_url].nil?
