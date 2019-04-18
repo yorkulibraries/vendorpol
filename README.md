@@ -1,6 +1,6 @@
 # vendorpol
 
-URLs for vendor privacy policies and terms of use.
+URLs for vendor privacy policies and terms of use, and whether creating an account is optional or mandatory.
 
 ## Data
 
