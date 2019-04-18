@@ -9,6 +9,7 @@ vendor_data = Hash.new { |h, k| h[k] = {} } # A hash of hashes
 
 CSV.foreach(data_file, headers: true, header_converters: :symbol) do |row|
   vendor_data[row[:vendor]][row[:title]] = {
+    account: row[:account],
     privacy_url: row[:privacy_url],
     tc_url: row[:tc_url]
   }
@@ -31,6 +32,11 @@ vendor_data.sort_by { |v| v[0] }.each do |vendor|
     end
     unless product[1][:tc_url].nil?
       print %(<a href="#{product[1][:tc_url]}">t&amp;c</a>)
+    end
+    if product[1][:account] == "optional"
+      print " (account optional)"
+    elsif product[1][:account] == "mandatory"
+      print " (account mandatory)"
     end
     puts "</li>"
   end
