@@ -28,6 +28,11 @@ On a Unix-type copy the HTML into your clipboard with [xsel](https://github.com/
 
 Now you can easily paste the HTML into your content management system.
 
+## To do
+
+* Script to generate a list of products missing privacy or T&C URLs
+* Normalize vendor names
+
 ## License
 
 [CC-0](https://creativecommons.org/publicdomain/zero/1.0/) (no copyright).
