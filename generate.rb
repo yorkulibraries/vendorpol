@@ -17,7 +17,7 @@ end
 
 puts <<HEAD
   <p>
-    Explanatory text goes here.
+    When you use electronic resources purchased by York University Libraries and provided by third-party vendors, you are subject to the vendor's policies. This page has links to the privacy policy and terms and conditions of use for all of the vendors and products that the Libraries provides.  It also shows whether creating an account is required or optional to use the product.
   </p>
 HEAD
 
