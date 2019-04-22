@@ -21,8 +21,20 @@ puts <<HEAD
   </p>
 HEAD
 
+# Index
+puts "<h2>Index</h2>"
+puts "<ul>"
 vendor_data.sort_by { |v| v[0] }.each do |vendor|
-  puts "<h3> " + CGI.escapeHTML(vendor[0]) + "</h3>"
+  vendor_name = CGI.escapeHTML(vendor[0])
+  puts %( <li> <a href="##{vendor_name}">#{vendor_name}</a> </li>)
+end
+puts "</ul>"
+
+puts "<h2>Vendors and policies</h2>"
+
+vendor_data.sort_by { |v| v[0] }.each do |vendor|
+  vendor_name = CGI.escapeHTML(vendor[0])
+  puts %(<h3 id="#{vendor_name}">#{vendor_name}</h3>)
   puts "  <ul>"
   vendor[1].sort_by { |p| p[0] }.each do |product|
     print "    <li> " + CGI.escapeHTML(product[0]) + ": "
