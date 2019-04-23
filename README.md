@@ -8,8 +8,8 @@ URLs for vendor privacy policies and terms of use, and whether creating an accou
 * product_type: (Index/Database, E-Book Package, E-Journals, E-Video Collection)
 * vendor: name of vendor
 * account: is account required to use the product? ("", optional, mandatory)
-* privacy_url: URL of privacy policy
-* tc_url: URL of terms and conditions
+* privacy_url: URL of privacy policy (or "")
+* tc_url: URL of terms and conditions (or "")
 * notes
 
 Data collected by Stephanie Power, of York University Libraries, during 2018–2019.
@@ -32,6 +32,9 @@ Now you can easily paste the HTML into your content management system.
 
 * Script to generate a list of products missing privacy or T&C URLs
 * Normalize vendor names
+* Generate Markdown version?
+* Put explanatory text in a separate file and read it in
+* Think about how to handle different institutions with different holdings using this
 
 ## License
 
